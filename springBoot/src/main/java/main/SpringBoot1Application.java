@@ -1,13 +1,13 @@
-package edication.springBoot;
+package main;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FirstSpringBootProjectApplication {
+public class SpringBoot1Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FirstSpringBootProjectApplication.class, args);
+		SpringApplication.run(SpringBoot1Application.class, args);
 	}
 
 }
