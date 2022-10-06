@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import model.Product;
-
 @Controller
 public class LoginController {
 	@GetMapping("/")
@@ -23,11 +21,12 @@ public class LoginController {
 		
 		loggedIn = acc.login();
 		
-		if(loggedIn)
-			model.addAttribute("massage", "Log in success");
-		else
+		if(loggedIn) {
+			return "main.html";
+		}
+		else {
 			model.addAttribute("massage", "Log in failed");
-		
-		return "login.html";
+			return "login.html";
+		}
 	}
 }
