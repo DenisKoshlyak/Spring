@@ -8,10 +8,10 @@
 		<version>2.7.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>RestProject</artifactId>
+	<groupId>com.</groupId>
+	<artifactId>RestException</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>RestProject</name>
+	<name>RestException</name>
 	<description>...</description>
 	<properties>
 		<java.version>17</java.version>
