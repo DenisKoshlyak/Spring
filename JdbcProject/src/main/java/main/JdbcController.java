@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class JdbcController {
 	private final PurchaseRepository purchaseRepository;
 	
-	public PaymentController(PurchaseRepository purchaseRepository) {
+	public JdbcController(PurchaseRepository purchaseRepository) {
 		this.purchaseRepository = purchaseRepository;
 	}
 	

@@ -16,7 +16,7 @@ public class PurchaseRepository {
 	
 	public void storePuchase(Purchase purchase) {
 		String sql = "INSERT INTO purchase VALUES (?, ?, ?)";
-		jdbc.update(sql, purchase.getId() ,purchase.getProduct(), purchase.getPrice());
+		jdbc.update(sql, null, purchase.getProduct(), purchase.getPrice());
 	}
 	
 	public List<Purchase> findAllPurchases(){
