@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import model.Person;
+import model.Account;
 import model.Transfer;
 import repository.PersonRowMapper;
 
@@ -18,17 +18,17 @@ public class AccountRepository {
 		this.jdbc = jdbc;
 	}
 	
-	public void addPerson(Person man) {
+	public void addPerson(Account man) {
 		String sql = "INSERT INTO account VALUES (?, ?, ?)";
 		jdbc.update(sql, null, man.getName(), man.getBalance());
 	}
 	
-	public Person findAccountByID(int id){
+	public Account findAccountByID(int id){
 		String sql = "SELECT * FROM account WHERE id = ?";
 		return jdbc.queryForObject(sql, new PersonRowMapper(), id);
 	}
 	
-	public List<Person> findAllPerson(){
+	public List<Account> findAllPerson(){
 		String sql = "SELECT * FROM account";
 		return jdbc.query(sql, new PersonRowMapper());
 	}

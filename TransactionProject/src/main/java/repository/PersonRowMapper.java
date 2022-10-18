@@ -5,12 +5,12 @@ import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-import model.Person;
+import model.Account;
 
-public class PersonRowMapper implements RowMapper<Person>{
+public class PersonRowMapper implements RowMapper<Account>{
 	@Override
-	public Person mapRow(ResultSet resultSet, int i) throws SQLException{
-		Person p = new Person();
+	public Account mapRow(ResultSet resultSet, int i) throws SQLException{
+		Account p = new Account();
 		p.setId(resultSet.getInt("id"));
 		p.setName(resultSet.getString("name"));
 		p.setBalance(resultSet.getBigDecimal("balance"));

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import model.Person;
+import model.Account;
 import model.Transfer;
 
 @RestController
@@ -21,17 +21,17 @@ public class AccountController {
 	}
 	
 	@PostMapping("/transfer")
-	public List<Person> transferAmount(@RequestBody Transfer transfer) {
+	public List<Account> transferAmount(@RequestBody Transfer transfer) {
 		return transferService.trasferAmount(transfer);
 	}
 	
 	@PostMapping("/addPerson")
-	public void addPerson(@RequestBody Person person) {
+	public void addPerson(@RequestBody Account person) {
 		transferService.addPerson(person);
 	}
 	
 	@GetMapping("/findAllPerson")
-	public List<Person> findPerson() {
+	public List<Account> findPerson() {
 		return transferService.findAllPerson();
 	}
 }
